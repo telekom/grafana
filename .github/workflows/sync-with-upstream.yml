@@ -1,0 +1,36 @@
+name: Sync Grafana fork with Upstream
+
+
+on:
+    workflow_dispatch:
+
+    schedule:
+        - cron: '0 6 * * *'
+
+
+jobs:
+    sync-with-upstream:
+        runs-on: ubuntu-24.04
+
+        permissions:
+          write-all
+
+        steps:
+            - name: 'Checkout repository'
+              uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+              with:
+                fetch-tags: true
+                fetch-depth: 0
+                token: ${{ secrets.SYNC_WITH_UPSTREAM_TOKEN }}
+
+            - name: 'Sync our fork with Upstream from Grafang'
+              run: |
+                git config --global user.name 'Stefan Bachhofner'
+                git config --global user.email 'stefan.bachhofner@magenta.at'
+
+                git remote add upstream https://github.com/grafana/grafana
+                git fetch --tags upstream
+
+                git checkout main
+                git merge --no-edit upstream/main
+                git push --tags origin main
