@@ -1228,14 +1228,6 @@ var (
 			HideFromAdminPage: true,
 		},
 		{
-			Name:              "unifiedStorageUseFullNgram",
-			Description:       "Use full n-gram indexing instead of edge n-gram for unified storage search",
-			Stage:             FeatureStageExperimental,
-			Owner:             grafanaSearchAndStorageSquad,
-			HideFromDocs:      true,
-			HideFromAdminPage: true,
-		},
-		{
 			Name:              "managedDualWriter",
 			Description:       "Pick the dual write mode from database configs",
 			Stage:             FeatureStageExperimental,
@@ -1942,16 +1934,6 @@ var (
 			Expression:        "false",
 		},
 		{
-			Name:              "enablePluginImporter",
-			Description:       "Set this to true to use the new PluginImporter functionality",
-			Stage:             FeatureStageExperimental,
-			Owner:             grafanaPluginsPlatformSquad,
-			HideFromAdminPage: true,
-			HideFromDocs:      true,
-			FrontendOnly:      true,
-			Expression:        "false",
-		},
-		{
 			Name:         "otelLogsFormatting",
 			Description:  "Applies OTel formatting templates to displayed logs",
 			Stage:        FeatureStageExperimental,
@@ -2047,8 +2029,8 @@ var (
 			Expression:   "false",
 		},
 		{
-			Name:        "grafanaPathfinder",
-			Description: "Enables Pathfinder app",
+			Name:        "interactiveLearning",
+			Description: "Enables the interactive learning app",
 			Stage:       FeatureStagePublicPreview,
 			Owner:       grafanaPathfinderSquad,
 		},
@@ -2136,7 +2118,7 @@ var (
 		},
 		{
 			Name:         "pluginStoreServiceLoading",
-			Description:  "Load plugins during store service startup instead of wire provider",
+			Description:  "Load plugins on store service startup instead of wire provider, and call RegisterFixedRoles after all plugins are loaded",
 			Stage:        FeatureStageExperimental,
 			FrontendOnly: false,
 			Owner:        grafanaPluginsPlatformSquad,
