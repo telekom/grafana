@@ -502,13 +502,17 @@ export interface FeatureToggles {
   */
   queryLibrary?: boolean;
   /**
-  * Enable dashboard library experiments that are production ready
+  * Displays datasource provisioned dashboards in dashboard empty page, only when coming from datasource configuration page
   */
   dashboardLibrary?: boolean;
   /**
-  * Enable suggested dashboards when creating new dashboards
+  * Displays datasource provisioned and community dashboards in dashboard empty page, only when coming from datasource configuration page
   */
   suggestedDashboards?: boolean;
+  /**
+  * Enables a flow to get started with a new dashboard from a template
+  */
+  dashboardTemplates?: boolean;
   /**
   * Sets the logs table as default visualisation in logs explore
   */
@@ -665,6 +669,10 @@ export interface FeatureToggles {
   */
   timeRangePan?: boolean;
   /**
+  * Enables new keyboard shortcuts for time range zoom operations
+  */
+  newTimeRangeZoomShortcuts?: boolean;
+  /**
   * Disables the log limit restriction for Azure Monitor when true. The limit is enabled by default.
   * @default false
   */
@@ -747,10 +755,6 @@ export interface FeatureToggles {
   * @default true
   */
   alertingNotificationsStepMode?: boolean;
-  /**
-  * Enables a button to send feedback from the Grafana UI
-  */
-  feedbackButton?: boolean;
   /**
   * Enable unified storage search UI
   */
@@ -1160,10 +1164,6 @@ export interface FeatureToggles {
   * Enables a new panel time settings drawer
   */
   panelTimeSettings?: boolean;
-  /**
-  * Enable template dashboards
-  */
-  dashboardTemplates?: boolean;
   /**
   * Enables app platform API for annotations
   * @default false
