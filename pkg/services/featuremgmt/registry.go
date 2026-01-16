@@ -1279,13 +1279,6 @@ var (
 			Expression:  "false",
 		},
 		{
-			Name:        "k8SFolderMove",
-			Description: "Enable folder's api server move",
-			Stage:       FeatureStageExperimental,
-			Owner:       grafanaSearchAndStorageSquad,
-			Expression:  "false",
-		},
-		{
 			Name:        "improvedExternalSessionHandlingSAML",
 			Description: "Enables improved support for SAML external sessions. Ensure the NameID format is correctly configured in Grafana for SAML Single Logout to function properly.",
 			Stage:       FeatureStageGeneralAvailability,
@@ -1591,6 +1584,13 @@ var (
 			HideFromDocs: true,
 		},
 		{
+			Name:         "kubernetesAuthzGlobalRolesApi",
+			Description:  "Registers AuthZ Global Roles /apis endpoint",
+			Stage:        FeatureStageExperimental,
+			Owner:        identityAccessTeam,
+			HideFromDocs: true,
+		},
+		{
 			Name:         "kubernetesAuthzRolesApi",
 			Description:  "Registers AuthZ Roles /apis endpoint",
 			Stage:        FeatureStageExperimental,
@@ -1888,7 +1888,7 @@ var (
 		{
 			Name:         "newGauge",
 			Description:  "Enable new gauge visualization",
-			Stage:        FeatureStageExperimental,
+			Stage:        FeatureStagePublicPreview,
 			FrontendOnly: true,
 			Owner:        grafanaDatavizSquad,
 			Expression:   "false",
