@@ -3820,11 +3820,6 @@
       "count": 2
     }
   },
-  "public/app/plugins/datasource/mixed/module.ts": {
-    "no-barrel-files/no-barrel-files": {
-      "count": 2
-    }
-  },
   "public/app/plugins/datasource/mssql/azureauth/AzureCredentialsForm.tsx": {
     "no-restricted-syntax": {
       "count": 10
@@ -4111,11 +4106,6 @@
       "count": 2
     }
   },
-  "public/app/plugins/panel/geomap/types.ts": {
-    "no-barrel-files/no-barrel-files": {
-      "count": 1
-    }
-  },
   "public/app/plugins/panel/geomap/utils/tooltip.ts": {
     "@typescript-eslint/consistent-type-assertions": {
       "count": 2
@@ -4190,11 +4180,6 @@
   },
   "public/app/plugins/panel/nodeGraph/layout.ts": {
     "@typescript-eslint/consistent-type-assertions": {
-      "count": 1
-    }
-  },
-  "public/app/plugins/panel/nodeGraph/types.ts": {
-    "no-barrel-files/no-barrel-files": {
       "count": 1
     }
   },
